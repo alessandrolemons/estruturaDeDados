@@ -36,11 +36,6 @@ int incluiDepois(ListaSE *lt, int cod, Dado d);
 int excluiNodo(ListaSE *lt, int cod, Dado *d);
 
 
-
-
-
-
-
 #endif
 
 
