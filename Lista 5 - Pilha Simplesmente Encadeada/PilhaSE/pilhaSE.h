@@ -1,27 +1,41 @@
-#ifndef Listase_H
-#define Listase_H
+#ifndef pilhse_h
+
+#define pilhase_h
 
 #define SUCESSO 0
 #define PILHA_VAZIA 1
 #define FALTOU_MEMORIA 2
 
-typedef struct{
-    int cod;
-    float peso;
+typedef struct {
+	int cod;
+	float peso;
 } Dado;
+        
+typedef struct nodo Nodo;
 
-struct Nodo{
+struct nodo {
     Dado info;
     Nodo *prox;
 };
 
-typedef struct{
+typedef struct {
     Nodo *topo;
 } Pilha;
 
 
 void criaPilha(Pilha *pl);
+void exibe(Pilha pl);
+int empilha(Pilha *pl, Dado d);
+int desempilha(Pilha *pl, Dado *d);
+int estaVazia(Pilha pl);
+int consultaTopo(Pilha pl, Dado *d);
+int quantidadeDeNodos(Pilha pl);
+
+
 
 #endif
+
+
+
 
 
