@@ -21,7 +21,6 @@ int incluiNoInicio(ListaSE *lt, Dado d){
 }
  
 void exibe(ListaSE lt){
-	system("cls");
      Nodo *pAux;
      pAux = lt.inicio;
      printf("\nInicio: %p \n", lt.inicio);
@@ -34,7 +33,6 @@ void exibe(ListaSE lt){
 }
 
 int quantidadeDeNodos(ListaSE lt){
-	system("cls");
     int conta = 0;
     Nodo *pAux;
     
@@ -117,12 +115,22 @@ int excluiDoFim(ListaSE *lt, Dado *d){
 	system("cls");
 
 	Nodo *pAux, *pTemp, *penultimo;
+		pAux = lt->inicio;
+
 	
 	if (lt->inicio==NULL){
 		return(LISTA_VAZIA);	
 	}
+	
+	else if(pAux->prox == NULL){
+		*d = pAux->info;
+		pTemp = pAux;
+		free(pTemp);
+		lt->inicio = NULL;
+		return (SUCESSO);
+	}
+	
 	else{
-		pAux = lt->inicio;
 		while(pAux != NULL){
 			if(pAux->prox == NULL){
 				*d = pAux->info;

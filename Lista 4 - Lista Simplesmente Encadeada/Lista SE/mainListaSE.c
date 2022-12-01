@@ -30,6 +30,7 @@ int main()
                  break;
                  
             case 3:
+            	 system("cls");
                  printf("Quantidade de Nodos = %d\n", quantidadeDeNodos(lt));
                  break;
                  
