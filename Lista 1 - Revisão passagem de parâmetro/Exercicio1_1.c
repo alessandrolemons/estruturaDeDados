@@ -3,7 +3,6 @@
 
 main(){
 
-
     int Q, sexo, c = 0;
     float altura;
     float aux = 0;
