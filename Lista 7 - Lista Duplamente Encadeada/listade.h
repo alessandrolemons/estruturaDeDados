@@ -30,7 +30,14 @@ void exibe(ListaDE lt);
 int incluiNoInicio(ListaDE *lt, Dado d);
 int quantidadeDeNodos(ListaDE lt);
 int exibeSituacao(ListaDE lt);
-
+int excluiDoInicio(ListaDE *lt, Dado *d);
+int incluiNoFim(ListaDE *lt, Dado d);
+int excluiDoFim(ListaDE *lt, Dado *d);
+int consultaPorCodigo(ListaDE lt, Dado *d, int cod);
+int incluiDepois(ListaDE *lt, Dado d, int cod);
+int excluiNodo(ListaDE *lt, Dado *d, int cod);
+void gravar (ListaDE *lt, Dado d);
+void lerArquivo (ListaDE *lt, Dado d);
 
 #endif
 
