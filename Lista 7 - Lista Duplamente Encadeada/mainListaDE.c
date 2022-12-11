@@ -131,7 +131,7 @@ int main(){
 					
 				case 12:
 					gravar(&lt, d);
-					break;										
+					return(0);										
       }
       
     	exibe(lt);

@@ -271,11 +271,9 @@ int excluiNodo(ListaDE *lt, Dado *d, int cod){
 	}
 
 	return(CODIGO_INEXISTENTE);
-
 }
 
-void lerArquivo (ListaDE *lt, Dado d){
-	
+void lerArquivo(ListaDE *lt, Dado d){
 	FILE *file;	
 	int arqDados;
 	char bDados[10];
@@ -311,7 +309,7 @@ void gravar(ListaDE *lt, Dado d){
 	
 	FILE *file;	
 	char nome[20];
-	Nodo *pAux;
+	Nodo *pAux = lt->inicio;
 		
 	printf("Digite um nome para o arquivo(Finalize com .txt): ");
 	scanf("%s", &nome);	
@@ -323,12 +321,12 @@ void gravar(ListaDE *lt, Dado d){
 		}
 		else{			
 			while(pAux != NULL){
-				fprintf(file, "%d %f\n", pAux->info.cod, pAux->info.peso);
-				printf("entrou\n");
+				fprintf(file, "%d %.2f\n", pAux->info.cod, pAux->info.peso);
 				pAux = pAux->prox;
 			}
-			printf("Seu arquivo foi gravado com com sucesso!");
+			printf("Seu arquivo foi gravado com com sucesso!\n");
 		}
+		return 0;
 }
 
 
